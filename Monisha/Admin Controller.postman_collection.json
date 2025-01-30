@@ -1,0 +1,403 @@
+{
+	"info": {
+		"_postman_id": "67507085-4acf-4e21-9bd2-823b67d7263b",
+		"name": "Admin Controller",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28573271",
+		"_collection_link": "https://web.postman.co/workspace/Keeboot~85900365-a928-47d6-a73d-609720b26fdf/collection/32681156-67507085-4acf-4e21-9bd2-823b67d7263b?action=share&source=collection_link&creator=28573271"
+	},
+	"item": [
+		{
+			"name": "findAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "https://54.173.133.144:8082/api/v1/admin/findAllUsers?loginId=101",
+					"protocol": "https",
+					"host": [
+						"54",
+						"173",
+						"133",
+						"144"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"admin",
+						"findAllUsers"
+					],
+					"query": [
+						{
+							"key": "loginId",
+							"value": "101"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllRoles",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "https://54.173.133.144:8082/api/v1/admin/getAllRoles?loginId=101",
+					"protocol": "https",
+					"host": [
+						"54",
+						"173",
+						"133",
+						"144"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"admin",
+						"getAllRoles"
+					],
+					"query": [
+						{
+							"key": "loginId",
+							"value": "101"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getConfiguration",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "https://54.173.133.144:8082/api/v1/admin/getConfiguration?loginId=101",
+					"protocol": "https",
+					"host": [
+						"54",
+						"173",
+						"133",
+						"144"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"admin",
+						"getConfiguration"
+					],
+					"query": [
+						{
+							"key": "loginId",
+							"value": "101"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRole",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "https://54.173.133.144:8082/api/v1/admin/getRole?roleID=14",
+					"protocol": "https",
+					"host": [
+						"54",
+						"173",
+						"133",
+						"144"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"admin",
+						"getRole"
+					],
+					"query": [
+						{
+							"key": "roleID",
+							"value": "14"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "https://54.173.133.144:8082/api/v1/admin/getUser?email=jack%40gmail.com",
+					"protocol": "https",
+					"host": [
+						"54",
+						"173",
+						"133",
+						"144"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"admin",
+						"getUser"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "jack%40gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUsersInfo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "https://54.173.133.144:8082/api/v1/admin/getUsersInfo?loginId=117",
+					"protocol": "https",
+					"host": [
+						"54",
+						"173",
+						"133",
+						"144"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"admin",
+						"getUsersInfo"
+					],
+					"query": [
+						{
+							"key": "loginId",
+							"value": "117"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createRole",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"roleId\": 26,\r\n  \"RoleName\": \"SUPER USER\",\r\n  \"NoOfUsers\": 1,\r\n  \"status\": \"Y\",\r\n  \"description\": \"SUPER ACCESS\",\r\n  \"modules\": [\r\n    {\r\n      \"moduleId\": 1,\r\n      \"moduleName\": \"MASTERS\",\r\n      \"createdOn\": \"2024-02-09T07:37:14.727Z\",\r\n      \"ownerId\": 117,\r\n      \"roleId\": 26,\r\n      \"active\": true\r\n    }\r\n  ]\r\n}"
+				},
+				"url": {
+					"raw": "https://54.173.133.144:8082/api/v1/admin/createRole?loginId=117",
+					"protocol": "https",
+					"host": [
+						"54",
+						"173",
+						"133",
+						"144"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"admin",
+						"createRole"
+					],
+					"query": [
+						{
+							"key": "loginId",
+							"value": "117"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"UserName\": \"Catherine\",\r\n  \"MobileNumber\": \"(433) 555-0254\",\r\n  \"emailId\": \"catherine@gmail.com\",\r\n  \"status\": \"Y\",\r\n  \"roleId\": 26,\r\n  \"branchId\": 2\r\n}"
+				},
+				"url": {
+					"raw": "https://54.173.133.144:8082/api/v1/admin/createUser?loginId=117",
+					"protocol": "https",
+					"host": [
+						"54",
+						"173",
+						"133",
+						"144"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"admin",
+						"createUser"
+					],
+					"query": [
+						{
+							"key": "loginId",
+							"value": "117"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 151,\r\n  \"UserName\": \"Catherine\",\r\n  \"MobileNumber\": \"(433) 777-0543\",\r\n  \"emailId\": \"catherine@gmail.com\",\r\n  \"status\": \"Y\",\r\n  \"roleId\": 26,\r\n  \"branchId\": 2\r\n}"
+				},
+				"url": {
+					"raw": "https://54.173.133.144:8082/api/v1/admin/updateUser?loginId=117",
+					"protocol": "https",
+					"host": [
+						"54",
+						"173",
+						"133",
+						"144"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"admin",
+						"updateUser"
+					],
+					"query": [
+						{
+							"key": "loginId",
+							"value": "117"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateRole",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"roleId\": 29,\r\n  \"RoleName\": \"SUPER USER\",\r\n  \"NoOfUsers\": 1,\r\n  \"status\": \"Y\",\r\n  \"description\": \"Dummy for test\",\r\n  \"modules\": [\r\n    {\r\n      \"moduleId\": 1,\r\n      \"moduleName\": \"MASTERS\",\r\n      \"createdOn\": \"2024-02-09T07:54:48.459Z\",\r\n      \"ownerId\": 117,\r\n      \"roleId\": 29,\r\n      \"active\": true\r\n    }\r\n  ]\r\n}"
+				},
+				"url": {
+					"raw": "https://54.173.133.144:8082/api/v1/admin/updateRole?loginId=117",
+					"protocol": "https",
+					"host": [
+						"54",
+						"173",
+						"133",
+						"144"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"admin",
+						"updateRole"
+					],
+					"query": [
+						{
+							"key": "loginId",
+							"value": "117"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
